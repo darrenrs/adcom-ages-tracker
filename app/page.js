@@ -1,94 +1,21 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import Link from "next/link";
+import { PRODUCT_INFO_ADCOM, PRODUCT_INFO_AGES } from "@/app/constants";
 
-export default function Home() {
+export default function Root() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+    <main className="m-4">
+      <div className="text-2xl dark:text-slate-100">Welcome to the Mission Tracker!</div>
+      <div className="italic dark:text-slate-400">Select your game</div>
+      <div className="flex dark:text-slate-100 p-12">
+        <Link href={`/${PRODUCT_INFO_ADCOM.COMMON_NAME}`} className="flex-initial w-2/4 bg-zinc-800 rounded-2xl text-2xl">
+          <Image src={`/assets/${PRODUCT_INFO_ADCOM.TITLE_ID}/icon.png`} width={32} height={48} alt='Icon'></Image>
+          {PRODUCT_INFO_ADCOM.PRODUCT_NAME}
+        </Link>
+        <Link href={`/${PRODUCT_INFO_AGES.COMMON_NAME}`} className="flex-initial w-2/4 bg-zinc-800 rounded-2xl text-2xl">
+          <Image src={`/assets/${PRODUCT_INFO_AGES.TITLE_ID}/icon.png`} width={32} height={48} alt='Icon'></Image>
+          {PRODUCT_INFO_AGES.PRODUCT_NAME}
+        </Link>
       </div>
     </main>
   );
