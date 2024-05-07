@@ -14,8 +14,6 @@ export default function EvergreenRootRedirect({ params }) {
   }, [PIPE_TO_RANK]);
 
   return (
-    <main className="m-4">
-      <div className="flex dark:text-slate-100 p-12">Redirecting to previously active rank ...</div>
-    </main>
+    <div>Redirecting to previously active rank ...</div>
   );
 }
