@@ -1,0 +1,10 @@
+{
+  "FunctionName": "DataConfig",
+  "FunctionParameter": {
+    "DataVersion": null
+  },
+  "GeneratePlayStreamEvent": true,
+  "RevisionSelection": "Live",
+  "SpecificRevision": null,
+  "AuthenticationContext": null
+}

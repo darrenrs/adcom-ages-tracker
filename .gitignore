@@ -37,4 +37,5 @@ next-env.d.ts
 
 # product-specific
 public/assets/*
+tmp
 .env
